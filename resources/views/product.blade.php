@@ -36,7 +36,7 @@
         </a>
       </div>
       <div class="trending-waper">
-        <h2>Trending Products</h2>
+        <h2>Produits Tendance</h2>
       @foreach ($products as $item)
     <div class="trending-item">
         <a href="details/{{$item['id']}}">
@@ -50,7 +50,7 @@
   
       @endforeach
     </div>
-  </div>
+  
 
   
 

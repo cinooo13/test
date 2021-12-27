@@ -24,11 +24,17 @@ Route::get('/logout', function () {
     Session::forget('user');
     return redirect('login');
 });
-
+Route::view("/inscription" , "inscription"); 
 Route::post("/login" , [UserController::class, 'login']); 
+Route::post("/inscription" , [UserController::class, 'inscription']); 
 Route::get("/" , [ProductController::class, 'index']);
 Route::get("/details/{id}" , [ProductController::class, 'detailes']);
 Route::post("/add_to_cart" , [ProductController::class, 'addtocart']);
+Route::get("/cartList" , [ProductController::class, 'CartList']);
+Route::get("/sup/{id}" , [ProductController::class, 'supProduits']);
+Route::get("/confirmation" , [ProductController::class, 'confirm']);
+Route::post("/orderplace" , [ProductController::class, 'orderPlace']);
+Route::get("/ordersP" , [ProductController::class, 'orderF']);
 
 
 
